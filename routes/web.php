@@ -30,4 +30,4 @@ Route::get('admin/cars/{car}/delete', [App\Http\Controllers\carController::class
 Route::get('sewa-mobil', [App\Http\Controllers\carController::class, 'sewa'])->name('sewa')->middleware(['web', 'auth']);
 Route::get('sewa-mobil/{car}/rent', [App\Http\Controllers\carController::class, 'rentcar'])->name('cars.rentcar')->middleware(['web', 'auth']);
 Route::post('sewa-mobil/{car}/rent-submit', [App\Http\Controllers\carController::class, 'rentcarsubmit'])->name('cars.rentcarsubmit')->middleware(['web', 'auth']);
-Route::get('rents/{book}/delete', [App\Http\Controllers\RentController::class, 'destroy'])->name('rents.delete')->middleware(['web', 'auth']);
+Route::get('rents/{rent}/delete', [App\Http\Controllers\RentController::class, 'destroy'])->name('rents.delete')->middleware(['web', 'auth']);
